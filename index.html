@@ -1,22 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Inspect Me Closely</title>
+	<title>Hover Effect Website</title>
 	<style>
 		body {
-			background-color: white;
-			color: black;
-			font-family: sans-serif;
+			background-color: #f2f2f2;
+			color: #333;
+			font-family: 'Open Sans', sans-serif;
 			text-align: center;
 			margin-top: 50px;
 		}
 		h1 {
 			font-size: 48px;
 			margin-bottom: 30px;
+			text-shadow: 2px 2px #eee;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 50px;
+		}
+		.card {
+			width: 300px;
+			height: 200px;
+			margin: 20px;
+			overflow: hidden;
+			position: relative;
+			box-shadow: 2px 2px 5px #999;
+			cursor: pointer;
+		}
+		.card:hover .overlay {
+			transform: scale(1.1);
+		}
+		.card:hover img {
+			transform: scale(1.1);
+		}
+		.card img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease-out;
+		}
+		.overlay {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.6);
+			opacity: 0;
+			transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			cursor: pointer;
+			text-shadow: 2px 2px #333;
+		}
+		.overlay:hover {
+			opacity: 1;
 		}
 	</style>
 </head>
 <body>
-	<h1>Inspect me closely</h1>
+	<h1>Hover Effect Website</h1>
+	<div class="container">
+		<div class="card">
+			<img src="https://picsum.photos/id/237/300/200" alt="Image 1">
+			<div class="overlay">Click to expand</div>
+		</div>
+		<div class="card">
+			<img src="https://picsum.photos/id/238/300/200" alt="Image 2">
+			<div class="overlay">Click to expand</div>
+		</div>
+		<div class="card">
+			<img src="https://picsum.photos/id/239/300/200" alt="Image 3">
+			<div class="overlay">Click to expand</div>
+		</div>
+	</div>
 </body>
 </html>
