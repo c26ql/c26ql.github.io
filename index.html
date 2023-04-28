@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Inspect me closely</title>
-	<style>
-		body {
-			background-color: #f2f2f2;
-			color: #333;
-			font-family: 'Open Sans', sans-serif;
-			text-align: center;
-			margin-top: 50px;
-		}
-		h1 {
-			font-size: 48px;
-			margin-bottom: 30px;
-			text-shadow: 2px 2px #eee;
-		}
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			margin-bottom: 50px;
-		}
-		.card {
-			width: 300px;
-			height: 200px;
-			margin: 20px;
-			overflow: hidden;
-			position: relative;
-			box-shadow: 2px 2px 5px #999;
-			cursor: pointer;
-		}
-		.card:hover .overlay {
-			transform: scale(1.1);
-		}
-		.card:hover img {
-			transform: scale(1.1);
-		}
-		.card img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			transition: transform 0.5s ease-out;
-		}
-		.overlay {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-color: rgba(0, 0, 0, 0.6);
-			opacity: 0;
-			transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: #fff;
-			font-size: 24px;
-			font-weight: bold;
-			cursor: pointer;
-			text-shadow: 2px 2px #333;
-		}
-		.overlay:hover {
-			opacity: 1;
-		}
-	</style>
-</head>
-<body>
-	<h1>Inspect me cloesly</h1>
-	<div class="container">
-		<div class="card">
-			<img src="https://i.imgur.com/pJG5KLJ.png" alt="Image 1">
-			<div class="overlay">Click to expand</div>
-		</div>
-		<div class="card">
-			<img src="https://i.imgur.com/ktS1Vmt.png" alt="Image 2">
-			<div class="overlay">Click to expand</div>
-		</div>
-		<div class="card">
-			<img src="https://i.imgur.com/ImZdjev.png" alt="Image 3">
-			<div class="overlay">Click to expand</div>
-		</div>
-	</div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <style>
+      .card {
+        display: inline-block;
+        margin: 10px;
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card img {
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        height: auto;
+      }
+      .card:hover img {
+        transform: scale(1.2);
+      }
+      .card .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+      }
+      .card:hover .caption {
+        bottom: -50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="https://i.imgur.com/pJG5KLJ.png" alt="Image 1">
+      <div class="caption">Image 1</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/ktS1Vmt.png" alt="Image 2">
+      <div class="caption">Image 2</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/ImZdjev.png" alt="Image 3">
+      <div class="caption">Image 3</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/gNnjkhE.png" alt="Image 4">
+      <div class="caption">Image 4</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/iNZfkLB.png" alt="Image 5">
+      <div class="caption">Image 5</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/uOMoJFJ.png" alt="Image 6">
+      <div class="caption">Image 6</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/GRBj2x4.png" alt="Image 7">
+      <div class="caption">Image 7</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/yfQiwAS.png" alt="Image 8">
+      <div class="caption">Image 8</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/txDCCyK.png" alt="Image 9">
+      <div class="caption">Image 9</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/lXo5SGE.png" alt="Image 10">
+      <div class="caption">Image 10</div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/YLo7PuB.png" alt="Image 11">
+    </div>
+    <div class="card">
+      <div class="caption">Image 11</div>
+      <img src="https://i.imgur.com/1jwUCmG.png" alt="Image 12">
+    </div>
+  </body>
 </html>
 
