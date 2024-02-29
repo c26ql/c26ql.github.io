@@ -1,31 +1,4 @@
-import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header>
-        <h1>Website Title</h1>
-      </header>
-      <main>
-        <section className="todo">
-          <h2>To Do</h2>
-          import React, { useState } from 'react';
-
-function ToDoList() {
-  const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState('');
-
-  const handleChange = (e) => {
-    setNewTask(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (newTask === '') return;
-    const taskToAdd = {
-      id: Date.now(),
-      task: newTask,
-      date: new Date().toLocaleDateString(),
     };
     setTasks([...tasks, taskToAdd]);
     setNewTask('');
